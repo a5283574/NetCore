@@ -54,6 +54,24 @@ namespace Xiezn.Core.Models.DbModel
 		/// </summary>
 		[SugarColumn(ColumnName = "addtime")]
 		public DateTime? Addtime { get; set; } = DateTime.Now;
+        [SugarColumn(ColumnName = "bianhao")]
+
+        public string Bianhao { get; set; }
+        [SugarColumn(ColumnName = "danwei")]
+
+        public string Danwei { get; set; }
+        [SugarColumn(ColumnName = "fuzeren")]
+
+        public string Fuzeren { get; set; }
+        [SugarColumn(ColumnName = "dianhua")]
+
+        public string Dianhua { get; set; }
+        [SugarColumn(ColumnName = "xiangmudengji")]
+
+        public string XiangmuDengji { get; set; }
+        [SugarColumn(ColumnName = "beianshijian")]
+
+        public string Beianshijian { get; set; }
 
 	}
 }

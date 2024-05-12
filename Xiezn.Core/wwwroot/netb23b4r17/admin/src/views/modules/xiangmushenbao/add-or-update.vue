@@ -36,8 +36,23 @@
 				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'"  label="用户姓名" prop="yonghuxingming">
 					<el-input v-model="ruleForm.yonghuxingming" placeholder="用户姓名" clearable  :readonly="ro.yonghuxingming"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="用户姓名" prop="yonghuxingming">
-					<el-input v-model="ruleForm.yonghuxingming" placeholder="用户姓名" readonly></el-input>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="电话" prop="yonghuxingming">
+					<el-input v-model="ruleForm.dianhua" placeholder="电话" readonly></el-input>
+				</el-form-item>	
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="编号" prop="yonghuxingming">
+					<el-input v-model="ruleForm.bianhao" placeholder="编号" readonly></el-input>
+				</el-form-item>	
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="单位" prop="yonghuxingming">
+					<el-input v-model="ruleForm.danwei" placeholder="单位" readonly></el-input>
+				</el-form-item>				
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="负责人" prop="yonghuxingming">
+					<el-input v-model="ruleForm.fuzeren" placeholder="负责人" readonly></el-input>
+				</el-form-item>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="项目登记" prop="yonghuxingming">
+					<el-input v-model="ruleForm.xiangmudengji" placeholder="项目登记" readonly></el-input>
+				</el-form-item>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="备案时间" prop="yonghuxingming">
+					<el-input v-model="ruleForm.xiangmudengji" placeholder="备案时间" readonly></el-input>
 				</el-form-item>
 			</template>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0","fontSize":"inherit","textAlign":"center"}' class="btn">
