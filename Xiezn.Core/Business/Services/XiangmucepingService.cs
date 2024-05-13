@@ -38,7 +38,10 @@ namespace Xiezn.Core.Business.Services
 
 
 
-
+        public XiangmucepingDbModel GetByZhanghao(string yonghuzhanghao)
+        {
+           return  Db.Queryable<XiangmucepingDbModel>().Where(f => f.Yonghuzhanghao == yonghuzhanghao).First();
+        }
         public PageModel<XiangmucepingDbModel> GetPageList(int page, int limit, string sort, string order, List<IConditionalModel> conModels)
         {
             PageModel pageModel = new PageModel() { PageIndex = page, PageSize = limit };

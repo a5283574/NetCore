@@ -68,7 +68,7 @@ namespace Xiezn.Core.Models.DbModel
         public string Dianhua { get; set; }
         [SugarColumn(ColumnName = "xiangmudengji")]
 
-        public string XiangmuDengji { get; set; }
+        public string Xiangmudengji { get; set; }
         [SugarColumn(ColumnName = "beianshijian")]
 
         public string Beianshijian { get; set; }

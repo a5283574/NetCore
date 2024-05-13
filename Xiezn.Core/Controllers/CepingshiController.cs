@@ -48,6 +48,8 @@ namespace Xiezn.Core.Controllers
         private readonly CepingshiService _bll;
         private readonly IEmailService _EmailService;
         private readonly ConfigService _configBLL;
+        private readonly XiangmucepingService _bll_1;
+
 
         /// <summary>
         /// 构造函数
@@ -76,6 +78,7 @@ namespace Xiezn.Core.Controllers
             _hostingEnvironment = hostingEnvironment;
             _savePath = _hostingEnvironment.WebRootPath + Path.DirectorySeparatorChar + ConfigHelper.GetConfig("SchemaName") + Path.DirectorySeparatorChar + "upload" + Path.DirectorySeparatorChar;
             _bll = new CepingshiService();
+            this._bll_1 = new XiangmucepingService();
         }
 
         /// <summary>
@@ -162,6 +165,7 @@ namespace Xiezn.Core.Controllers
             try
             {
                 TokenModel tm = CacheHelper.TokenModel;
+                //var data2 = _bll_1.GetByZhanghao();
                 var Data = tm == null ? "" : _bll.BaseGetById(tm.Uid) ?? new object();
 
                 return Json(new { Code = 0, Data = Data });

@@ -100,18 +100,18 @@ namespace Xiezn.Core.Models.DbModel
 		/// 测评人
 		/// </summary>
 		[SugarColumn(ColumnName = "cepingren")]
-		public string CepingRen { get; set; }
+		public string cepingren { get; set; }
 		public void AddCepingRen(string name) 
 		{
-			if (this.CepingRen ==null )
+			if (this.cepingren == null )
 			{
-				this.CepingRen = name;
+				this.cepingren = name;
             }
 			else
 			{
-				if (!this.CepingRen.Contains(name))
+				if (!this.cepingren.Contains(name))
 				{
-                    this.CepingRen += "、" + name;
+                    this.cepingren += "、" + name;
                 }
 			}
 		}

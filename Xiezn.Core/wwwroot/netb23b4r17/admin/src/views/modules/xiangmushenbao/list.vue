@@ -182,11 +182,25 @@ import xiangmucepingCrossAddOrUpdate from "../xiangmuceping/add-or-update";
 				// this.layouts = arr.join()
 				// this.contents.pageEachNum = 10
 			},
-			xiangmucepingCrossAddOrUpdateHandler(row,type,crossOptAudit,crossOptPay,statusColumnName,tips,statusColumnValue){
-				this.showFlag = false;
-				this.addOrUpdateFlag = false;
-				this.xiangmucepingCrossAddOrUpdateFlag = true;
-				this.$storage.set('crossObj',row);
+			xiangmucepingCrossAddOrUpdateHandler(row, type, crossOptAudit, crossOptPay, statusColumnName, tips, statusColumnValue) {
+
+
+                this.showFlag = false;
+                this.addOrUpdateFlag = false;
+                this.xiangmucepingCrossAddOrUpdateFlag = true;
+                this.$http({
+                    url: "xiangmushenbao/page?yonghuzhanghao="+ row.yonghuzhanghao,
+                    method: "get",
+                    params: row
+                }).then(({ data }) => {
+                    if (data && data.yonghuzhanghao) {
+                        this.$storage.set('crossObj', data);
+					} else {
+
+                        this.$storage.set('crossObj', row);
+                    }
+                    this.dataListLoading = false;
+                });
 				this.$storage.set('crossTable','xiangmushenbao');
 				this.$storage.set('statusColumnName',statusColumnName);
 				this.$storage.set('statusColumnValue',statusColumnValue);

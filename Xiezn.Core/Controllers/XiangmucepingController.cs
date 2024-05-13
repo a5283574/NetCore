@@ -361,7 +361,7 @@ namespace Xiezn.Core.Controllers
 
         /// <summary>
         /// 详情接口
-        /// </summary>
+        /// </summary>  
         /// <param name="id">主键id</param>
         /// <returns></returns>
         [HttpPost("{id}")]

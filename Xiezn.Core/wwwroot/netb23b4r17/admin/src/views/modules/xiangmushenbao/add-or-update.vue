@@ -8,52 +8,83 @@
 			:rules="rules"
 			label-width="150px"
 		>
-			<template >
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'"  label="项目名称" prop="xiangmumingcheng">
-					<el-input v-model="ruleForm.xiangmumingcheng" placeholder="项目名称" clearable  :readonly="ro.xiangmumingcheng"></el-input>
+			<template>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="项目名称" prop="xiangmumingcheng">
+					<el-input v-model="ruleForm.xiangmumingcheng" placeholder="项目名称" clearable :readonly="ro.xiangmumingcheng"></el-input>
 				</el-form-item>
 				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="项目名称" prop="xiangmumingcheng">
 					<el-input v-model="ruleForm.xiangmumingcheng" placeholder="项目名称" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'"  label="目标" prop="mubiao">
-					<el-input v-model="ruleForm.mubiao" placeholder="目标" clearable  :readonly="ro.mubiao"></el-input>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="目标" prop="mubiao">
+					<el-input v-model="ruleForm.mubiao" placeholder="目标" clearable :readonly="ro.mubiao"></el-input>
 				</el-form-item>
 				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="目标" prop="mubiao">
 					<el-input v-model="ruleForm.mubiao" placeholder="目标" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'"  label="时间表" prop="shijianbiao">
-					<el-input v-model="ruleForm.shijianbiao" placeholder="时间表" clearable  :readonly="ro.shijianbiao"></el-input>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="时间表" prop="shijianbiao">
+					<el-input v-model="ruleForm.shijianbiao" placeholder="时间表" clearable :readonly="ro.shijianbiao"></el-input>
 				</el-form-item>
 				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="时间表" prop="shijianbiao">
 					<el-input v-model="ruleForm.shijianbiao" placeholder="时间表" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'"  label="用户账号" prop="yonghuzhanghao">
-					<el-input v-model="ruleForm.yonghuzhanghao" placeholder="用户账号" clearable  :readonly="ro.yonghuzhanghao"></el-input>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="用户账号" prop="yonghuzhanghao">
+					<el-input v-model="ruleForm.yonghuzhanghao" placeholder="用户账号" clearable :readonly="ro.yonghuzhanghao"></el-input>
 				</el-form-item>
 				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="用户账号" prop="yonghuzhanghao">
 					<el-input v-model="ruleForm.yonghuzhanghao" placeholder="用户账号" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'"  label="用户姓名" prop="yonghuxingming">
-					<el-input v-model="ruleForm.yonghuxingming" placeholder="用户姓名" clearable  :readonly="ro.yonghuxingming"></el-input>
+
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="用户姓名" prop="xiangmumingcheng">
+					<el-input v-model="ruleForm.yonghuxingming" placeholder="用户姓名" clearable :readonly="ro.xiangmumingcheng"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="电话" prop="yonghuxingming">
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="用户姓名" prop="xiangmumingcheng">
+					<el-input v-model="ruleForm.yonghuxingming" placeholder="用户姓名" readonly></el-input>
+				</el-form-item>
+
+
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="电话" prop="dianhua">
+					<el-input v-model="ruleForm.dianhua" placeholder="电话" clearable :readonly="ro.dianhua"></el-input>
+				</el-form-item>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="电话" prop="dianhua">
 					<el-input v-model="ruleForm.dianhua" placeholder="电话" readonly></el-input>
-				</el-form-item>	
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="编号" prop="yonghuxingming">
+				</el-form-item>
+
+
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="编号" prop="bianhao">
+					<el-input v-model="ruleForm.bianhao" placeholder="编号" clearable :readonly="ro.dianhua"></el-input>
+				</el-form-item>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="编号" prop="bianhao">
 					<el-input v-model="ruleForm.bianhao" placeholder="编号" readonly></el-input>
-				</el-form-item>	
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="单位" prop="yonghuxingming">
+				</el-form-item>
+
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="单位" prop="danwei">
+					<el-input v-model="ruleForm.danwei" placeholder="单位" clearable :readonly="ro.dianhua"></el-input>
+				</el-form-item>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="单位" prop="danwei">
 					<el-input v-model="ruleForm.danwei" placeholder="单位" readonly></el-input>
-				</el-form-item>				
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="负责人" prop="yonghuxingming">
+				</el-form-item>
+
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="负责人" prop="fuzeren">
+					<el-input v-model="ruleForm.fuzeren" placeholder="负责人" clearable :readonly="ro.dianhua"></el-input>
+				</el-form-item>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="负责人" prop="fuzeren">
 					<el-input v-model="ruleForm.fuzeren" placeholder="负责人" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="项目登记" prop="yonghuxingming">
-					<el-input v-model="ruleForm.xiangmudengji" placeholder="项目登记" readonly></el-input>
+
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="项目等级" prop="xiangmudengji">
+					<el-input v-model="ruleForm.xiangmudengji" placeholder="项目等级" clearable :readonly="ro.dianhua"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="备案时间" prop="yonghuxingming">
-					<el-input v-model="ruleForm.xiangmudengji" placeholder="备案时间" readonly></el-input>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="项目等级" prop="xiangmudengji">
+					<el-input v-model="ruleForm.xiangmudengji" placeholder="项目等级" readonly></el-input>
 				</el-form-item>
+
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' class="input" v-if="type!='info'" label="备案时间" prop="beianshijian">
+					<el-input v-model="ruleForm.beianshijian" placeholder="备案时间" clearable :readonly="ro.dianhua"></el-input>
+				</el-form-item>
+				<el-form-item :style='{"color":"inherit","margin":"0 0 20px 0","fontSize":"inherit"}' v-else class="input" label="备案时间" prop="beianshijian">
+					<el-input v-model="ruleForm.beianshijian" placeholder="备案时间" readonly></el-input>
+				</el-form-item>
+
 			</template>
 			<el-form-item :style='{"width":"100%","padding":"0","margin":"0","fontSize":"inherit","textAlign":"center"}' class="btn">
 				<el-button class="btn3"  v-if="type!='info'" type="success" @click="onSubmit">
